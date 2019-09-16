@@ -13,6 +13,7 @@ class Square extends HTMLElement {
                 width: 100px;
                 height: 100px;
                 background: red;
+                margin-bottom: 10px;
             }
         `;
 
@@ -22,3 +23,9 @@ class Square extends HTMLElement {
 }
 
 customElements.define('custom-square', Square);
+
+const btn = document.querySelector('button');
+btn.onclick = () => {
+    const square = document.createElement('custom-square');
+    document.body.appendChild(square);
+}
